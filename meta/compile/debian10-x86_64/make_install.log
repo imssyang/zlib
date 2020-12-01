@@ -1,0 +1,15 @@
+❯ make install 2>../make_install.log 1>&2
+rm -f /opt/zlib/lib/libz.a
+cp libz.a /opt/zlib/lib
+chmod 644 /opt/zlib/lib/libz.a
+cp libz.so.1.2.11 /opt/zlib/lib
+chmod 755 /opt/zlib/lib/libz.so.1.2.11
+rm -f /opt/zlib/share/man/man3/zlib.3
+cp zlib.3 /opt/zlib/share/man/man3
+chmod 644 /opt/zlib/share/man/man3/zlib.3
+rm -f /opt/zlib/lib/pkgconfig/zlib.pc
+cp zlib.pc /opt/zlib/lib/pkgconfig
+chmod 644 /opt/zlib/lib/pkgconfig/zlib.pc
+rm -f /opt/zlib/include/zlib.h /opt/zlib/include/zconf.h
+cp zlib.h zconf.h /opt/zlib/include
+chmod 644 /opt/zlib/include/zlib.h /opt/zlib/include/zconf.h
